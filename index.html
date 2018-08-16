@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            height: 100vh;
+            width: 100vw;
+        }
+        
+        button {
+            position: absolute;
+            top: calc(30% - 30px);
+            left: calc(50% - 50px);
+            border: 1px solid black;
+            line-height: 30px;
+            padding: 10px 15px;
+            text-transform: uppercase;
+            background-color: #fff;
+            width: 100px;
+            height: 60px;
+            cursor: pointer;
+            color: black;
+            transition: 1.3s ease all .2s;
+        }
+        
+        div.square {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 2vh;
+            width: 2vh;
+            border: 4px solid black;
+            background: black;
+            transition: left .5s, top .5s .5s, width .5s .6s, height .4s .5s;
+        }
+        
+        button:hover {
+            color: white;
+            background-color: black;
+        }
+        
+        button:hover+div.square {
+            position: absolute;
+            height: 12vh;
+            width: 12vh;
+            top: calc(100% - 12vh);
+            left: calc(100% - 12vh);
+        }
+    </style>
+</head>
+
+<body>
+    <button>button</button>
+    <div class="square"></div>
+</body>
+
+</html>
