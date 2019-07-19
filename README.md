@@ -1,4 +1,4 @@
-# button_animation
+# button animation
 
 - CSS
 - HTML
